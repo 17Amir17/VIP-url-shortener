@@ -11,7 +11,7 @@ export async function requestRegister(username, password) {
       username,
       password,
     });
-    displayUser(username);
+    requestLogin(username, password)
     if (res.data.success) return true;
     else return res.message;
   } catch (error) {
