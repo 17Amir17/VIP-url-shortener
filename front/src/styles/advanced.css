@@ -1,0 +1,14 @@
+.advanced {
+  margin-top: 1em;
+  text-align: left;
+}
+
+.advanced-label:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.advanced-label {
+  margin-top: 0.25em;
+  font-weight: 600;
+}

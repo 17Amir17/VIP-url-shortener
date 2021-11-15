@@ -1,0 +1,49 @@
+@media (max-width: 700px) {
+  * {
+    font-size: large !important;
+  }
+
+  h1 {
+    font-size: x-large !important;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 !important;
+  }
+
+  .special-input > select {
+    font-size: small !important;
+  }
+
+  .special-input > input {
+    font-size: small !important;
+  }
+
+  input[type='submit'] {
+    font-size: small !important;
+  }
+
+  section {
+    width: 80% !important;
+    height: 90%;
+  }
+
+  .second > .between {
+    flex-direction: column !important;
+  }
+
+  .advanced-label:hover {
+    background-color: initial;
+  }
+
+  input[type='submit']:hover {
+    background-color: #2c87c5;
+  }
+
+  input[type='submit']:active {
+    transition: background-color 0.01s ease-in;
+    background-color: #a8def7;
+  }
+}
