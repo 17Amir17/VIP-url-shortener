@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const userQueries = require('../mongo/queries/userQueries');
+const auth = require('../middleware/auth')
 
 router.post('/register', async (req, res, next) => {
   try {
@@ -32,6 +33,24 @@ router.post('/login', async (req, res, next) => {
     next(error);
   }
 });
+
+router.get('/login', auth, (req, res, next) => {
+    try {
+        res.json({user: req.user});
+    } catch (error) {
+        next(error)
+    }
+})
+
+router.get('/logout', auth, (req, res, next) => {
+  try {
+    res.clearCookie("token");
+    res.send("Cookie has been deleted");
+  } catch (error) {
+      next(error)
+  }
+})
+
 
 function validateInput(input) {
   if (!input) return false;

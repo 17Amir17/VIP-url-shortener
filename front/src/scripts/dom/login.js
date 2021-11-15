@@ -1,4 +1,4 @@
-import { requestLogin, requestRegister } from '../shortenAPI/userAPI';
+import { requestLogin, requestLogout, requestRegister } from '../shortenAPI/userAPI';
 
 const Swal = require('sweetalert2');
 export function login() {
@@ -20,10 +20,9 @@ export function login() {
       const password = document.getElementById('swal-input2').value;
       return requestLogin(username, password)
         .then((response) => {
+          console.log(response);
           if (!(response === true)) {
             throw new Error(response.message);
-          } else {
-            register = true;
           }
           return response;
         })
@@ -43,6 +42,8 @@ export function login() {
               icon: 'warning',
             });
             throw new Error(response.message);
+          } else {
+            register = true;
           }
           return response;
         })
@@ -63,4 +64,22 @@ export function login() {
   });
 }
 
-function register() {}
+export async function logout(){
+  await requestLogout();
+  showLogin();
+}
+
+export function displayUser(user){
+  hideLogin();
+  document.querySelector('.user').innerText = user;
+}
+
+function hideLogin(){
+  document.querySelector('#login-input').hidden = true;
+  document.querySelector('#logout-input').hidden = false;
+}
+
+function showLogin(){
+  document.querySelector('#login-input').hidden = false;
+  document.querySelector('#logout-input').hidden = true;
+}

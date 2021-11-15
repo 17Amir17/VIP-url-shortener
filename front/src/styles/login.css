@@ -1,4 +1,4 @@
-#login-input{
+#login-input, #logout-input{
     position: absolute;
     top:10px;
     right:10px;
@@ -9,7 +9,7 @@
     border-radius: 1em;
 }
 
-#login-input:hover{
+#login-input:hover, #logout-input:hover{
     background-color: lightblue;
     cursor: pointer;
 }
