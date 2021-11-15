@@ -1,1 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Analytics</title><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><h1>URL Analytics</h1><main><section><label for="short-url">Enter Shortened URL:</label> <input id="short-url" class="special-input"/> <input id="search-btn" type="submit" value="Search"/></section><section id="results" class="hidden" hidden><div class="between"><h1>Analytics</h1><input id="delete-btn" type="submit" value="Delete"/></div><p>URL: <a class="url" target="_blank"></a></p><p>Shortened: <a class="short" target="_blank"></a></p><p>Clicks: <span class="clicks"></span></p><p>Time Created: <span class="created"></span></p><p>Last Clicked: <span class="last"></span></p><canvas class="chart-canvas"></canvas></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <h1>URL Analytics</h1>
+    <main>
+      <section>
+        <label for="short-url">Enter Shortened URL:</label>
+        <input id="short-url" type="text" class="special-input" />
+        <input id="search-btn" type="submit" value="Search" />
+      </section>
+      <section id="results" class="hidden" hidden>
+        <div class="between">
+          <h1>Analytics</h1>
+          <input id="delete-btn" type="submit" value="Delete" />
+        </div>
+        <p>URL: <a class="url" target="_blank"></a></p>
+        <p>Shortened: <a class="short" target="_blank"></a></p>
+        <p>Clicks: <span class="clicks"></span></p>
+        <p>Time Created: <span class="created"></span></p>
+        <p>Last Clicked: <span class="last"></span></p>
+        <canvas class="chart-canvas"></canvas>
+      </section>
+    </main>
+  </body>
+</html>

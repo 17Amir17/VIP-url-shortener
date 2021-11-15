@@ -3,6 +3,7 @@
 @import url('./mobile.css');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
 @import url('izitoast/dist/css/iziToast.min.css');
+@import url('login.css');
 
 * {
   font-family: 'Zen Kaku Gothic New', sans-serif;

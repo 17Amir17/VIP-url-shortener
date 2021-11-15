@@ -5,7 +5,7 @@ import { initListeners } from './listeners/listeners';
 if (location.href.endsWith('analytics.html')) {
   //JS for analytics page
   initAnalyticsListeners();
-} else {
+}else {
   //JS for main page
   initListeners();
 }

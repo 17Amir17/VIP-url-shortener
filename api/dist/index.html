@@ -1,1 +1,52 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"/><title>URL Shortener</title><link rel="icon" href="favicon.ico"><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><h1>The Best URL Shortener</h1><main><section><legend>URL Shortener</legend><label for="url_input">URL:</label><div class="special-input"><select name="schemes" id="scheme"><option value="https://">https://</option><option value="http://">http://</option><option value="">None</option></select> <input id="url_input" name="url" placeholder="Example: www.google.com/"/></div><div class="advanced hidden" hidden><label for="custom-url">Custom URL:</label> <input id="custom-url"/></div><span class="advanced-label">Click here for more options ⚙</span><div class="between" style="width: 100%"><input id="post-btn" type="submit" value="POST URL"/> <input id="analytics-btn" type="submit" value="Analytics"/></div></section><section class="hidden second"><div class="between"><div style="display: flex; flex-direction: column; text-align: left"><span>Short URL:</span> <a id="shortened-url" href="" target="_blank"></a></div><input id="copy-btn" type="submit" value="Copy"/></div></section></main><footer><p>By <i>Amir Angel</i></p></footer></body></html>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>URL Shortener</title>
+  <link rel="icon" href="favicon.ico"><script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <h1>The Best URL Shortener</h1>
+    <main>
+      <section>
+        <legend>URL Shortener</legend>
+        <label for="url_input">URL:</label>
+        <div class="special-input">
+          <select name="schemes" id="scheme">
+            <option value="https://">https://</option>
+            <option value="http://">http://</option>
+            <option value="">None</option>
+          </select>
+          <input
+            id="url_input"
+            type="text"
+            name="url"
+            placeholder="Example: www.google.com/"
+          />
+        </div>
+        <div class="advanced hidden" hidden>
+          <label for="custom-url">Custom URL:</label>
+          <input id="custom-url" type="text" />
+        </div>
+        <span class="advanced-label">Click here for more options ⚙</span>
+        <div class="between" style="width: 100%">
+          <input id="post-btn" type="submit" value="POST URL" />
+          <input id="analytics-btn" type="submit" value="Analytics" />
+        </div>
+      </section>
+      <section class="hidden second">
+        <div class="between">
+          <div style="display: flex; flex-direction: column; text-align: left">
+            <span>Short URL:</span>
+            <a id="shortened-url" href="" target="_blank"></a>
+          </div>
+          <input id="copy-btn" type="submit" value="Copy" />
+        </div>
+      </section>
+    </main>
+    <span id='login-input'>Login</span>
+    <footer>
+      <p>By <i>Amir Angel</i></p>
+    </footer>
+  </body>
+</html>

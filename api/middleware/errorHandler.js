@@ -15,6 +15,12 @@ function errorHandler(err, request, response, next) {
         .status(404)
         .sendFile(path.resolve(__dirname, '../dist/404.html'));
       break;
+    case errorCodes.badInput:
+      response.status(400).json({message: errorCodes.badInput});
+      break;
+    case errorCodes.alreadyExists:
+      response.statis(403).json({message: errorCodes.alreadyExists});
+      break;
     default:
       console.log('Internal Error: ', err.message);
       response

@@ -24,6 +24,7 @@ const config = {
       filename: 'analytics.html',
     }),
 
+
     new MiniCssExtractPlugin(),
 
     // Add your plugins here

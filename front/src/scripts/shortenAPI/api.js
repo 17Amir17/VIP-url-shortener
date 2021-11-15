@@ -3,13 +3,18 @@ import axios from 'axios';
 const baseURL = 'http://localHost:3000/';
 // const baseURL = 'https://vryshort.herokuapp.com/';
 export async function postURL(body) {
-  return axios.post(`${baseURL}api/shorten`, body);
+  return axios.post(`${baseURL}api/shorten`, body, getHeaders());
 }
 
 export async function getStats(code) {
-  return axios.get(`${baseURL}api/statistics/${code}`);
+  return axios.get(`${baseURL}api/statistics/${code}`, getHeaders());
 }
 
 export async function deleteURL(id) {
-  return axios.delete(`${baseURL}api/delete/${id}`);
+  return axios.delete(`${baseURL}api/delete/${id}`, getHeaders());
+}
+
+function getHeaders(){
+  return {}
+  // return {headers: {auth: token}}
 }
