@@ -48,7 +48,6 @@ export async function cookieLogin() {
 export async function requestLogout(){
   try {
     await axios.get(`${baseURL}/user/logout`);
-    show
   } catch (error) {
     return false;
   }
